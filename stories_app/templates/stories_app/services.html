@@ -1,0 +1,70 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Услуги - Русскоговорящая Юта{% endblock %}
+
+{% block front %}
+
+<!-- Head wrapper------------------------------>
+<explore class="container ubuntu" id="webTitle">
+    <div class="row">
+        <div class="col text-center">
+            <div class="py-3" id="webWrapper">
+                <h2 class="display-3">WEB идея?</h2>
+                <h1 class="display-3">мы воплатим это в жизнь</h1>
+            </div>
+        </div>
+    </div>
+</explore>
+
+<!-- First Wraper ------------------------------------------>
+<div class="jumbotron jumbotron-sm ubuntu my-0" id="firstWrapper">
+  <div class="container">
+    <!-- container for ad text-->
+  </div>
+</div>
+
+<!-- Second Wraper ----------------------------->
+<div class="container ubuntu" id="secondWrapper">
+  <div class="row" id="wrapperBody">
+
+    <!-- Left Block ------------------------------>
+    <div class="col mb-3" id="secondWrapper_row_1">
+      <div class="py-3">
+        <div class="d-flex flex-column" id="secondWrapperBox_1">
+          <h4 class="display-4 text-center pt-5">Разработка WEB Дизайна</h4>
+          <img src="{% static 'stories_app/bootstrap/src/img/design.jpeg' %}" alt="desingpic" id="legtwrapperImg">
+        </div>
+      </div>
+    </div>
+    <!-- Right Block ----------------------------->
+    <div class="col mb-3" id="secondWrapper_row_2">
+      <div class="py-3">
+        <div class="d-flex flex-column" id="secondWrapperBox_2">
+          <img src="{% static 'stories_app/bootstrap/src/img/mobile.jpeg' %}" alt="desingpic" id="legtwrapperImg" class="pb-3">
+          <h4 class="display-4 text-center">Мобильное Маштабирование</h4>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Third wrapper---------------------------------------------->
+<div class="jumbotron jumbotron-sm ubuntu my-0" id="thirdWrapper">
+  <div class="container">
+    <!-- container for ad text-->
+  </div>
+</div>
+
+<!-- Head wrapper------------------------------>
+<explore class="container ubuntu" id="webTitle2">
+  <div class="py-3 text-center" id="webWrapper">
+    <h2 class="display-4">Разработка Динамических</h2>
+    <h1 class="display-4">WEB сайтов</h1>
+  </div>
+</explore>
+<div>
+  <img src="{% static 'stories_app/bootstrap/src/img/mobile.jpeg' %}" alt="" id="forthWrapperImg">
+</div>
+
+{% endblock %}

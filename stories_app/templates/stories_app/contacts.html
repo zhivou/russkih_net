@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% block title %}Обратная Свзять Русскоговорящая Юта{% endblock %}
+
+{% block front %}
+<div class="jumbotron jumbotron-sm ubuntu">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12">
+                <h1 class="h1">Обратная связь <small>Пожалуйста заполните форму ниже</small></h1>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container ubuntu">
+    <div class="row">
+        <div class="col-md-8">
+            <div class="well well-sm">
+                <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">Имя</label>
+                            <input type="text" class="form-control" id="name" placeholder="Введите имя" required="required" />
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Адрес эллектронной почты</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><span class="glyphicon glyphicon-envelope"></span>
+                                </span>
+                                <input type="email" class="form-control" id="email" placeholder="Введите адрес" required="required" /></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Тема Сообщения</label>
+                            <select id="subject" name="subject" class="form-control" required="required">
+                                <option value="service">Услуги</option>
+                                <option value="suggestions">Предложения</option>
+                                <option value="product">Реклама на сайте</option>
+                                <option value="other">Другое</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">Сообщение</label>
+                            <textarea name="message" id="message" class="form-control" rows="9" cols="25" required="required"
+                                placeholder="Сообщение"></textarea>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="submit" class="btn btn-primary pull-right" id="btnContactUs">Отправить</button>
+                    </div>
+                </div>
+                </form>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <form>
+            <legend><span class="glyphicon glyphicon-globe"></span> Our office</legend>
+            <address>
+                <strong>U-Computers, LLC</strong><br>
+                4516 South 700 East<br>
+                Murray, UT 84107<br>
+                <abbr title="Phone">
+                    P:</abbr>
+                (385) 414-7131
+            </address>
+            <address>
+                <strong>Dmitrii Skrylev</strong><br>
+                <a href="mailto:#">zivou4@gmail.com</a>
+            </address>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>{% block title %}{% endblock %}</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Bootstrap 4.0.0.beta.2 Starter Pack</title>
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Condensed" rel="stylesheet">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'stories_app/bootstrap/src/css/font-awesome.min.css' %}">
+  <link rel="stylesheet" href="{% static 'stories_app/bootstrap/src/css/bootstrap.css' %}">
+  <link rel="stylesheet" href="{% static 'stories_app/bootstrap/src/css/style.css' %}">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="{% static 'stories_app/bootstrap/src/js/jquery.js' %}"></script>
+</head>
+<body>
+  <!--Navigation-------->
+  <div clss="navigation">
+    <nav class="navbar navbar-fixed-top row navbar-expand-lg navbar-light ubuntu py-0" id="navbarWrapper"><!--expand is responsive mode, sm when the mode applying-->
+        <div class="container-fluid" id="navbarContainer">
+        <a class="navbar-brand my-0 mr-2" id="navbarBrand" href="{% url 'home' %}"><span class="h3">Russian Utah</span></a>
+        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarNav" id="navbarContent"> <!--Creating a button for future humburger-->
+          <span class="navbar-toggler-icon"></span> <!--This is the look of the button-->
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav mr-2" id="menuOnly">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'news' %}">Новости</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'stories' %}">Информация</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Обьявления</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'services' %}">Услуги</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'test' %}">Форум</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'contacts'%}">Связаться</a>
+              </li>
+            </ul>
+            <!-- Search and login -->
+        <form class="form-inline ubuntu" id="navInput">
+          <div class="input-group mr-1">
+            <input type="text" class="form-control" placeholder="текст">
+            <span class="input-group-btn">
+              <button class="btn btn-outline-dark" id="searchButton">Поиск</button>
+            </span>
+          </div>
+            <!-- LOGIN MODAL TRIGGER -->
+            <button class="btn btn-outline-success" type="button" data-toggle="modal" data-target="#loginModal">Login</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+  </div>
+  <!-- LOGIN MODAL -->
+  <div class="modal fade ubuntu" id="loginModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Войти</h5>
+          <button class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <button class="btn btn-success btn-block mb-2" type="button">Войти используя Facebook</button>
+              <label for="username">Имя пользователя</label>
+              <input type="text" placeholder="Пользователь" class="form-control">
+            </div>
+            <div class="form-group">
+              <label for="password">Пароль</label>
+              <input type="password" placeholder="Пароль" class="form-control">
+              <small class="text-muted">Subtext</small>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary btn-block" data-dismiss="modal">Войти</button><br />
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Body---------------------------------->
+  {% block front %}{% endblock %}
+  {% block storyTitle %}{% endblock %}
+  {% block story %}{% endblock %}
+  {% block humorTitle %}{% endblock %}
+  {% block newsRSS %}{% endblock %}
+  <!--BodyEND---------------------------------->
+
+  <!--FOOTER ------------------------------>
+  <div class="ubuntu" id="footer">
+      <!-- FOOTER BODY --------------->
+      <div class="row" id="footerBody">
+          <div class="col-md-3" id="firstRow">
+              <div class="py-3 d-none d-lg-block">
+                  <div class="d-flex flex-column align-items-start row" id="footerFirstRow">
+                      <a href="#" class="item"><h4>Новости</h4></a>
+                      <a href="#" class="item">Новости России</a>
+                      <a href="#" class="item">Новости Украины</a>
+                      <a href="#" class="item">Новости Армении</a>
+                      <a href="#" class="item">Новости Казахстана</a>
+                      <a href="#" class="item">Новости Армении</a>
+                      <a href="#" class="item">Новости Белорусии</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3" id="secondRow">
+              <div class="py-3 d-none d-lg-block">
+                  <div class="d-flex flex-column align-items-start row">
+                      <a href="#" class="item"><h4>Все О Юте</h4></a>
+                      <a href="#" class="item">Название топика второго</a>
+                      <a href="#" class="item">Название топика третьего</a>
+                      <a href="#" class="item">Название топика четрветого</a>
+                      <a href="#" class="item">Название топика пятого</a>
+                      <a href="#" class="item">Название топика</a>
+                      <a href="#" class="item">Название топика</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3" id="thirdRow">
+              <div class="py-3 d-none d-lg-block">
+                  <div class="d-flex flex-column align-items-start row">
+                      <a href="#" class="item"><h4>Услуги</h4></a>
+                      <a href="#" class="item">Название топика второго</a>
+                      <a href="#" class="item">Название топика третьего</a>
+                      <a href="#" class="item">Название топика четрветого</a>
+                      <a href="#" class="item">Название топика пятого</a>
+                      <a href="#" class="item">Название топика</a>
+                      <a href="#" class="item">Название топика</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3" id="forthRow">
+              <div class="py-3 d-none d-lg-block">
+                  <div class="d-flex flex-column align-items-start row">
+                      <a href="#" class="item"><h4>Обратная Связь</h4></a>
+                      <a href="#" class="item">Название топика второго</a>
+                      <a href="#" class="item">Название топика третьего</a>
+                      <a href="#" class="item">Название топика четрветого</a>
+                      <a href="#" class="item">Название топика пятого</a>
+                      <a href="#" class="item">Название топика</a>
+                      <a href="#" class="item">Название топика</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- FOOTER HEAD -------------------->
+      <div class="row py-0" id="footerHead">
+          <div class="col text-center">
+              <div class="py-2" id="socialButtons">
+                  <a href="#"><i class="fa fa-facebook fa-2x px-1" aria-hidden="true"></i></a>
+                  <a href="#"><i class="fa fa-instagram fa-2x px-1"></i></a>
+                  <a href="#"><i class="fa fa-vk fa-2x px-1"></i></a>
+                  <a href="#"><i class="fa fa-google-plus fa-2x px-1"></i></a>
+              </div>
+              <p>SKR-Design Utah 2017. All rights reserved.</p>
+          </div>
+      </div>
+  </div>
+    <!--FOOTER END------------------------------>
+    <script src="{% static 'stories_app/bootstrap/src/js/jquery.min.js' %}"></script>
+    <script src="{% static 'stories_app/bootstrap/src/js/popper.min.js' %}"></script>
+    <script src="{% static 'stories_app/bootstrap/src/js/bootstrap.min.js' %}"></script>
+</body>
+</html>

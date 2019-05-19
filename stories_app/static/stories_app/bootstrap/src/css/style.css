@@ -1,0 +1,102 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Condensed);
+body {
+  background: #fafafa; }
+
+.ubuntu {
+  font-family: 'Ubuntu Condensed', sans-serif !important; }
+
+#navbarNav {
+  margin-left: 100px !important; }
+
+.navbar-nav > li {
+  padding-left: 10px;
+  padding-right: 10px; }
+
+#navbarWrapper {
+  background: #ffffff; }
+
+#navbarContainer {
+  max-width: 1260px;
+  margin: auto; }
+
+.container {
+  max-width: 1260px;
+  margin: auto; }
+
+#navbarBrand {
+  position: relative;
+  font-size: 22px; }
+
+.fa {
+  color: black; }
+
+#footer {
+  left: 0; }
+  #footer #footerBody {
+    background: #FFFFFF;
+    padding-left: 12%; }
+    #footer #footerBody .item {
+      color: black; }
+
+#footerHead {
+  background: #FFFFFF; }
+
+#mediaImage {
+  width: 30%;
+  height: auto; }
+
+#caruselImage {
+  width: 1920px;
+  margin: auto;
+  height: 626px;
+  object-fit: none;
+  object-position: center; }
+
+#navInput {
+  height: 90%; }
+
+#webWrapper {
+  width: 800px;
+  margin: auto;
+  object-position: center; }
+
+#firstWrapper {
+  background: url("../img/web3.jpeg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 526px; }
+
+#secondWrapperBox_1, #secondWrapperBox_2 {
+  min-height: 650px; }
+
+#legtwrapperImg {
+  width: 600px;
+  margin: auto;
+  object-position: center; }
+
+#wrapperBody {
+  background: #FFFFFF; }
+
+#thirdWrapper {
+  background: url("../img/web5.jpeg") no-repeat;
+  background-size: cover;
+  min-height: 526px; }
+
+#forthWrapperImg {
+  width: 100%;
+  height: 626px;
+  object-fit: none; }
+
+#mainPic {
+  background: url("../img/utah.jpg") no-repeat;
+  background-position: center;
+  background-size: cover;
+  min-height: 526px;
+  object-fit: none; }
+
+#frontText {
+  color: #ffffff;
+  padding-top: 100px; }
+
+#frontPar {
+  color: #ffffff; }

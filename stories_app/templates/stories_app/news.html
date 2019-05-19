@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Русскоговорящая Юта Новости{% endblock %}
+
+{% block newsRSS %}
+  <!-- Home image container ----------------------------------->
+  <div class="container bg-faded ubuntu" id="homeImg">
+    <!-- Utah News -->
+    <explore class="container ubuntu" id="exploreSection">
+        <div class="row">
+            <div class="col text-center">
+                <div class="py-1">
+                    <h1 class="display-3">Новости Юты</h1>
+                </div>
+            </div>
+        </div>
+    </explore>
+    <p>Add a main news here and 3 cards!</p>
+    <!-- СНГ news -->
+    <explore class="container ubuntu" id="exploreSection">
+        <div class="row">
+            <div class="col text-center">
+                <div class="py-1">
+                    <h1 class="display-3">Новости СНГ</h1>
+                </div>
+            </div>
+        </div>
+    </explore>
+    <!-- start feedwind code --> <script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="56225/"></script> <!-- end feedwind code -->
+  </div>
+
+
+{% endblock %}

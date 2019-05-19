@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Русскоговорящая Юта Истории{% endblock %}
+
+{% block front %}
+  <!-- Home image container ----------------------------------->
+  <div class="container bg-faded ubuntu" id="homeImg">
+    <!-- EXPLORE MORE -->
+    <explore class="container ubuntu" id="exploreSection">
+        <div class="row">
+            <div class="col text-center">
+                <div class="py-1">
+                    <h1 class="display-3">Заголовок все о Юте</h1>
+                    <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis perspiciatis nostrum obcaecati cupiditate temporibus ex magnam nobis et illo natus. Corporis ipsa distinctio voluptates asperiores recusandae? Nulla earum, necessitatibus suscipit?</p>
+                </div>
+            </div>
+        </div>
+    </explore>
+      <!-- Front Cards ----------------------------------------->
+      <div class="card-deck mb-4" id="firstStory">
+          {% for mainStory in mainStorys %}
+          <div class="card">
+              <div class="card-body">
+                  <a href="{% url 'storyDetail' mainStory.id %}"><img class="card-img" src="{{mainStory.image.url}}"></a>
+                  <a href="{% url 'storyDetail' mainStory.id %}"><h4 class="card-title">{{mainStory.title}}</h4></a>
+                  <a href="{% url 'storyDetail' mainStory.id %}"><p class="card-text">{{mainStory.summary}}</p></a>
+              </div>
+          </div>
+          {% if forloop.counter|divisibleby:3 %}
+      </div>
+      <div class="card-deck mb-4" id="{{mainStory.title}}">
+        {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

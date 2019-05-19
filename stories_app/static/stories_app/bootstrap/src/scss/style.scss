@@ -1,0 +1,137 @@
+@import url(https://fonts.googleapis.com/css?family=Ubuntu+Condensed);
+$primary-color:#664200; //Border Color
+$font-size: 14px; // NavBar TextSize
+$socialButtonsColor: black; // Social Buttons Color
+$footerBackground: #FFFFFF; // Footer Background
+$navbarColor: #ffffff;
+$brand-font-size: 22px;
+$bodyBackground: #fafafa;
+$fronText: #ffffff;
+
+body{
+	background: $bodyBackground;
+}
+
+.ubuntu {
+	font-family: 'Ubuntu Condensed', sans-serif !important;
+}
+
+#navbarNav{
+	margin-left: 100px !important;
+}
+
+.navbar-nav > li{
+  padding-left:10px;
+  padding-right:10px;
+}
+
+#navbarWrapper{
+	background: $navbarColor;
+}
+
+#navbarContainer{
+	max-width: 1260px;
+	margin: auto;
+}
+
+.container{
+	max-width: 1260px;
+	margin: auto;
+}
+
+#navbarBrand{
+	position: relative;
+	font-size: $brand-font-size;
+}
+
+.fa{
+	color: $socialButtonsColor;
+}
+
+#footer{
+	left: 0;
+		#footerBody{
+			background: $footerBackground;
+			padding-left: 12%;
+				.item{
+					color: black;
+				}
+}
+}
+
+#footerHead{
+	background: $footerBackground;
+}
+
+#mediaImage{
+	width: 30%;
+  height: auto;
+}
+
+#caruselImage{
+	width: 1920px;
+	margin: auto;
+	height: 626px;
+	object-fit: none;
+	object-position: center;
+}
+
+#navInput{
+	height: 90%;
+}
+
+#webWrapper{
+	width: 800px;
+	margin: auto;
+	object-position: center;
+}
+
+#firstWrapper{
+	background: url('../img/web3.jpeg') no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+	min-height: 526px;
+}
+
+#secondWrapperBox_1, #secondWrapperBox_2{
+	min-height: 650px;
+}
+
+#legtwrapperImg{
+	width: 600px;
+	margin: auto;
+	object-position: center;
+}
+
+#wrapperBody{
+	background: $footerBackground;
+}
+
+#thirdWrapper{
+	background: url('../img/web5.jpeg') no-repeat;
+	background-size: cover;
+	min-height: 526px;
+}
+
+#forthWrapperImg{
+	width: 100%;
+	height: 626px;
+	object-fit: none;
+}
+
+#mainPic{
+	background: url('../img/utah.jpg') no-repeat;
+	background-position: center;
+	background-size: cover;
+	min-height: 526px;
+	object-fit: none;
+}
+
+#frontText{
+	color: $fronText;
+	padding-top: 100px;
+}
+
+#frontPar{
+	color: $fronText;
+}

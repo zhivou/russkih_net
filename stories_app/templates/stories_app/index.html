@@ -1,0 +1,109 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Русскоговорящая Юта{% endblock %}
+
+{% block front %}
+  <!-- Home image ----------------------------------->
+  <!-- carousel -->
+
+<div class="jumbotron jumbotron-sm ubuntu mt-0 mb-4" id="mainPic">
+  <div class="container" id="">
+    <p class="display-3 text-center" id="frontText">ДОБРО ПОЖАЛОВАТЬ В ЮТУ</p>
+    <p class="h1 text-center" id="frontPar">Здесь вы найдете все что нужно</p>
+  </div>
+</div>
+
+
+  <!-- DEPRICATED CARUSEL!!
+  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+  <div id="slider" class="carousel slide mb-5" data-ride="carousel">
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active">
+        <img class="d-block img-fluid img-responsive" src="{% static 'stories_app/bootstrap/src/img/DSC00608_CSC7E5b.jpg' %}" alt="First Slide" id="caruselImage">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block img-fluid img-responsive" src="{% static 'stories_app/bootstrap/src/img/DSC02437.jpg' %}" alt="Second Slide" id="caruselImage">
+      </div>
+      <div class="carousel-item">
+        <img class="d-block img-fluid img-responsive" src="{% static 'stories_app/bootstrap/src/img/DSC02460.jpg' %}" alt="Third Slide" id="caruselImage">
+      </div>
+    </div>
+    <a href="#slider" class="carousel-control-prev" data-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </a>
+
+    <a href="#slider" class="carousel-control-next" data-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </a>
+  </div> -->
+
+  <div class="container bg-faded ubuntu" id="homeImg">
+      <!-- Front Cards -------------------------->
+      <div class="card-deck mb-3" id="cardDeck-1">
+          <div class="card" id="deckCard_1">
+              <div class="card-body">
+                  <a href="#"><img class="card-img" src="{% static 'stories_app/bootstrap/src/img/DSC00608_CSC7E5b.jpg' %}"></a>
+                  <a href="#"><h4 class="card-title">Card Title</h4></a>
+                  <a href="#"><p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p></a>
+              </div>
+          </div>
+          <div class="card" id="deckCard_2">
+              <div class="card-body">
+                  <img class="card-img" src="{% static 'stories_app/bootstrap/src/img/DSC02437.jpg' %}">
+                  <h4 class="card-title">Card Title</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+              </div>
+          </div>
+          <div class="card" id="deckCard_3">
+              <div class="card-body">
+                  <img class="card-img" src="{% static 'stories_app/bootstrap/src/img/DSC02460.jpg' %}">
+                  <h4 class="card-title">Card Title</h4>
+                  <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+              </div>
+          </div>
+      </div>
+  {% endblock %}
+      {% block storyTitle %}
+      <!-- EXPLORE MORE -->
+      <explore class="container ubuntu" id="exploreSection">
+          <div class="row">
+              <div class="col text-center">
+                  <div class="py-1">
+                        <a href="{% url 'stories' %}"><h1>Узнай о Юте ВСЕ!</h1></a>
+                      <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis perspiciatis nostrum obcaecati cupiditate temporibus ex magnam nobis et illo natus. Corporis ipsa distinctio voluptates asperiores recusandae? Nulla earum, necessitatibus suscipit?</p>
+                  </div>
+              </div>
+          </div>
+      </explore>
+      {% endblock %}
+
+          {% block story %}
+          <!-- Media Objects -------------->
+          {% for mainStory in mainStorys %}
+          <div class="list-unstyled ubuntu py-2">
+            <li class="media">
+                <img class="d-flex px-1" id="mediaImage" src="{{mainStory.image.url}}">
+                <div class="media-body">
+                    <a href="{% url 'storyDetail' mainStory.id %}"><h5>{{mainStory.title}}</h5></a>
+                    <a href="{% url 'storyDetail' mainStory.id %}">{{mainStory.summary}}</a>
+                </div>
+            </li>
+          </div>
+          {% endfor %}
+    <!--<script type="text/javascript" src="https://feed.mikle.com/js/fw-loader.js" data-fw-param="56225/"></script>-->
+  </div>
+{% endblock %}
+
+{% block humorTitle %}
+<!-- EXPLORE MORE -->
+<explore class="container ubuntu" id="exploreSection">
+    <div class="row">
+        <div class="col text-center">
+            <div class="py-1">
+                <h1>Юмор Заголовок</h1>
+                <p class="">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis perspiciatis nostrum obcaecati cupiditate temporibus ex magnam nobis et illo natus. Corporis ipsa distinctio voluptates asperiores recusandae? Nulla earum, necessitatibus suscipit?</p>
+            </div>
+        </div>
+    </div>
+</explore>
+{% endblock %}

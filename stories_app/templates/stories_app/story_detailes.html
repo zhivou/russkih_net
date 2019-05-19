@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Русскоговорящая Юта{{storyDetailes.title}}{% endblock %}
+
+{% block storyTitle %}
+  <div class="container bg-faded ubuntu" id="homeImg">
+    <!--Title------------------------>
+    <explore class="container ubuntu" id="exploreSection">
+        <div class="row">
+            <div class="col text-center">
+                <div class="py-1">
+                    <h1 class="display-3">{{ storyDetailes.title }}</h1>
+                </div>
+            </div>
+        </div>
+    </explore>
+  <div class="card-deck mb-4" id="firstStory">
+      <div class="card">
+          <div class="card-body">
+              <img class="card-img" src="{{ storyDetailes.image.url }}">
+              <p class="card-text">{{storyDetailes.body}}</p>
+          </div>
+      </div>
+  </div>
+</div>
+{% endblock %}
